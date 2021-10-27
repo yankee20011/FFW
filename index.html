@@ -4,10 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>FFW test</title>
   </head>
   <body>
+    <div class="container">
+      <div class="container__header">
+        <div>
+          <h2 class="container__title">Please select one font</h2>
+        </div>
+        <div>
+          <ul class="container__nav nav-tabs">
+            <li class="active"><a href="#tab-1">MY FONTS</a></li>
+            <li class=""><a href="#tab-2">BUY FONTS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container__main">
+        <div id="tab-1" class="container__content active">
+          <form>
+            <div>
+              <div class="container__item-left">
+                <input
+                  type="radio"
+                  id="merriweather"
+                  name="font"
+                  value="merriweather"
+                />
+                <span>M</span>
+                <label for="merriweather"
+                  ><li>Merriweather project is led by Sorkin Type</li></label
+                >
+              </div>
+            </div>
+            <div>
+              <div class="container__item-right">
+                <input type="radio" id="robotto" name="font" value="robotto" />
+                <span id="R">R</span>
+                <label for="robotto"
+                  ><li>Robotto doesn't compromise, allowing letters</li></label
+                ><br />
+              </div>
+              <div class="container__item-right">
+                <input type="radio" id="noto" name="font" value="noto" />
+                <span id="NS">NS</span>
+                <label for="noto"
+                  ><li>Noto Sans covers over 30 scripts</li></label
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="tab-2" class="container__content">
+          <div class="container__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
