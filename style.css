@@ -94,6 +94,7 @@ input:focus {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  height: 75px;
 }
 
 .container__item-right:hover > input ~ span,
@@ -241,7 +242,7 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  grid-gap: 4rem;
+  grid-gap: 1rem;
 }
 
 .container__main {

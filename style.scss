@@ -70,6 +70,7 @@ input:focus {
     display: flex;
     position: relative;
     user-select: none;
+    height: 75px;
 
     &:hover > input ~ span,
     &:hover > input ~ label {
@@ -189,7 +190,7 @@ input:focus {
       > div {
         display: flex;
         flex-direction: column;
-        grid-gap: 4rem;
+        grid-gap: 1rem;
       }
     }
   }
