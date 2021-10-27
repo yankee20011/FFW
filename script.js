@@ -24,11 +24,26 @@ for (i = 0; i < myTabs.length; i++) {
 
 //Task #2
 
-const parseUrl = async (string) => {
-  const response = await fetch(string);
-  const data = await response.json();
-  console.log(data);
-  return data;
+const parseUrl = (string) => {
+  let obj = {
+    hash: "",
+    hostname: "",
+    pathname: "",
+  };
+
+  const arrUrl = string.split("");
+
+  obj.hash = arrUrl.slice(arrUrl.indexOf("#"), arrUrl.length).join("");
+  obj.hostname = arrUrl.slice(7, arrUrl.indexOf("/", 7)).join("");
+  obj.pathname = arrUrl
+    .slice(arrUrl.indexOf("/", 7), arrUrl.indexOf("?"))
+    .join("");
+
+  return obj;
 };
 
-parseUrl("https://cataas.com/api/cats?tags=cute");
+let obj = parseUrl("http://ffwagency.com/do/any.php?a=1#foo");
+
+console.log(obj.hash);
+console.log(obj.hostname);
+console.log(obj.pathname);
